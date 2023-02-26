@@ -12,6 +12,10 @@ body {
   color: var(--mainDark) !important;
 }
 
+a {
+  color: var(--mainWhite) !important;
+}
+
 .text-title {
   font-family: 'Permanent Marker', sans-serif;
   letter-spacing: 0.3rem;
