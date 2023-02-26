@@ -22,7 +22,7 @@ https://www.iconfinder.com/Makoto_msk  */}
         </div>
         <Link to='/cart' className='ml-auto'>
           <ButtonContainer>
-            <i className="fa-solid fa-cart-shopping">my cart</i>
+            <i className="fa-solid fa-cart-shopping" mr-2>my cart</i>
           </ButtonContainer>
         </Link>
       </NavWrapper >
@@ -37,4 +37,4 @@ const NavWrapper = styled.nav`
     font-size:1.3rem;
     text-transform: capitalize;
   }
-`
+`;
