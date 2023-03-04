@@ -22,7 +22,8 @@ https://www.iconfinder.com/Makoto_msk  */}
         </div>
         <Link to='/cart' className='ml-auto'>
           <ButtonContainer>
-            <i className="fa-solid fa-cart-shopping" mr-2>my cart</i>
+            <span className='me-2'><i className="fa-solid fa-cart-shopping" mr-2></i></span>
+            my cart
           </ButtonContainer>
         </Link>
       </NavWrapper >

@@ -166,4 +166,4 @@ const detailProduct = {
   total: 0
 };
 
-export default {storeProducts, detailProduct}
+module.exports = {storeProducts, detailProduct}
