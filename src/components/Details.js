@@ -69,6 +69,7 @@ export default class Details extends Component {
                     <ButtonContainer disabled={inCart?true:false}
                       onClick={()=>{
                         val.addToCart(id);
+                        val.handleDetail(id)
                       }}
                       cart
                     >
