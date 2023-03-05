@@ -16,7 +16,7 @@ export default class Details extends Component {
             price,
             title,
             inCart
-          } = val.detailProduct;
+          } = val.detailProduct;  
           return (
             <div className='container py-5'>
               {/* title */}
