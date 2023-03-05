@@ -3,7 +3,7 @@
   --lightBlue: #009ffd;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
-  --mainYellom: #ffa400;
+  --mainYellow: #ffa400;
 }
 
 body {
@@ -23,9 +23,12 @@ a {
 }
 
 .text-blue {
-  color: var(--mainBlue);
+  color: var(--mainBlue) !important;
 }
 
 .text-bright {
-  color: var(--lightBlue);
+  color: var(--lightBlue) !important;
+}
+.text-yellow {
+  color: var(--mainYellow) !important;
 }

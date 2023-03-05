@@ -50,12 +50,14 @@ export default class Details extends Component {
                     made by : <span className='text-uppercase'>
                       {company}
                     </span>
-                    <strong>
+                    </h4>
+                    <h5 className='text-blue text-title text-uppercase
+                      mt-1 mb-2
+                    '>
                       price : <span>$</span>
                       {price}
-                    </strong>
-                  </h4>
-                  <p className='text-capitalize font-weight-bold mt-3 mb-0'>
+                    </h5>
+                  <p className='text-capitalize text-title text-bright m-2 font-weight-bold mt-3 mb-0'>
                     some info about product:
                   </p>
                   <p className='text-muted lead'>{info}</p>
@@ -68,6 +70,7 @@ export default class Details extends Component {
                       onClick={()=>{
                         val.addToCart(id);
                       }}
+                      cart
                     >
                       {inCart?'in cart':"add to cart"}
                     </ButtonContainer>
