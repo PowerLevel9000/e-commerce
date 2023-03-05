@@ -15,10 +15,13 @@ export default class Modal extends Component {
             return null
           } else {
             return (
-              <ModalContainer onMouseDown={()=>closeModal()}>
-                <div 
-                id='modal'
-                className='col-8 mx-auto col-md-6 col-lg-4
+              <ModalContainer >
+                <div
+                  onClick={(event)=>{
+                    event.nativeEvent.stopImmediatePropagation();
+                  }}
+                  id='modal'
+                  className='col-8 mx-auto col-md-6 col-lg-4
                 text-center text-capitalize p-5
               '>
                   <h5>item added to the cart</h5>
@@ -26,12 +29,14 @@ export default class Modal extends Component {
                   <h5>{title}</h5>
                   <h5 className='text-muted'>Price : $ {price}</h5>
                   <Link to="/">
-                    <ButtonContainer onClick={()=>closeModal()}>
-                      store
+                    <ButtonContainer onClick={() => closeModal()}>
+                      Continue shoping
                     </ButtonContainer>
                   </Link>
                   <Link to="/cart">
-                    <ButtonContainer cart onClick={()=>closeModal()}>
+                    <ButtonContainer cart onClick={() => {
+                      closeModal();
+                    }}>
                       Go To Cart
                     </ButtonContainer>
                   </Link>
