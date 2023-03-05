@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { storeProducts, detailProduct } from './data';
 const ProductContext = React.createContext();
-// Provider
-
-
-// consumer
 
 
 class ProductProvider extends Component {
@@ -14,6 +10,8 @@ class ProductProvider extends Component {
     cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
+    cartSubTotal: 0,
+    CartTotal: 0,
   }
 
   componentDidMount() {
@@ -75,6 +73,19 @@ class ProductProvider extends Component {
     })
   }
 
+  increment = (id) => {
+    console.log("this is an increment of quantity : ", id)
+  }
+  decrement = (id) => {
+    console.log("this is an decrement of quantity : ", id)
+  }
+  removeItem = (id) => {
+    console.log("item removed : ", id)
+  }
+  clearCart = (id) => {
+    console.log("cart is cleared")
+  }
+
   render() {
     return (
       <ProductContext.Provider value={{
@@ -83,6 +94,9 @@ class ProductProvider extends Component {
         addToCart: this.addToCart,
         openModal: this.openModal,
         closeModal: this.closeModal,
+        increment: this.increment,
+        decrement: this.decrement,
+        clearCart: this.clearCart,
       }}>
         {this.props.children}
       </ProductContext.Provider>
