@@ -12,7 +12,8 @@ class ProductProvider extends Component {
     products: storeProducts,
     detailProduct: detailProduct,
   }
-  handleDetail = () => {
+  handleDetail = (event) => {
+    event.stopPropagation()
     console.log("Hello from detials")
   }
   addToCart = () => {
