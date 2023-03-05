@@ -17,26 +17,33 @@ class ProductProvider extends Component {
     this.setProducts();
   }
 
-  setProducts = () =>{
+  setProducts = () => {
     let tempProducts = [];
-    storeProducts.forEach(item=>{
-      const singleItem = {...item };
-      tempProducts = [...tempProducts,singleItem];
+    storeProducts.forEach(item => {
+      const singleItem = { ...item };
+      tempProducts = [...tempProducts, singleItem];
     })
-    this.setState(()=>{
-      return {products:tempProducts}
+    this.setState(() => {
+      return { products: tempProducts }
     })
   }
 
-  handleDetail = (event) => {
-    event.stopPropagation()
-    console.log("Hello from detials")
+  getItem = (id) => {
+    const product = this.state.products.find(item => item.id === id);
+    return product
+  }
+
+  handleDetail = (id) => {
+    const prod = this.getItem(id)
+    this.setState(() => {
+      return { detailProduct: prod }
+    })
   }
 
   addToCart = (id) => {
     console.log("Hello from add to cart :  ", id)
   }
-  
+
   render() {
     return (
       <ProductContext.Provider value={{
