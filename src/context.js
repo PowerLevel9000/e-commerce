@@ -12,7 +12,7 @@ class ProductProvider extends Component {
     modalProduct: detailProduct,
     cartSubTotal: 0,
     cartTotal: 0,
-    cartTax: 5
+    cartTax: 0,
   }
 
   componentDidMount() {
