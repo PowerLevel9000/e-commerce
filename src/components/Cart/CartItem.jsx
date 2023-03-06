@@ -18,14 +18,14 @@ const CartItem = ({ item, value }) => {
         {title}
       </div>
       <div className='col-10 mx-auto col-lg-2'>
-        <span className='d-lg-none'>price : </span>
-        {price}
+        <span className='d-lg-none'>price :</span>
+          {price} $
       </div>
       <div className='col-10 mx-auto col-lg-2 my-2 my-lg-0'>
         <div className="d-flex justify-content-center">
           <div>
             <span className="btn btncomponent bg-primary btn-black mx-1"
-              onClick={()=>decrement(id)}
+              onClick={() => decrement(id)}
             >
               - 1
             </span>
@@ -33,12 +33,25 @@ const CartItem = ({ item, value }) => {
               {count}
             </span>
             <span className="btn btncomponent bg-primary btn-black mx-1"
-              onClick={()=>increment(id)}
+              onClick={() => increment(id)}
             >
               + 1
             </span>
           </div>
         </div>
+      </div>
+      {/*  */}
+      <div className='col-10 mx-auto col-lg-2'>
+        <div className="cart-icon" onClick={() => {
+          removeItem(id)
+        }}>
+          <i className="fas fa-trash"></i>
+        </div>
+      </div>
+      <div className='col-10 mx-auto col-lg-2'>
+        <strong>
+          Item total : $ {total}
+        </strong>
       </div>
     </div>
   )

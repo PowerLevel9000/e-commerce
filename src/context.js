@@ -97,6 +97,7 @@ class ProductProvider extends Component {
         increment: this.increment,
         decrement: this.decrement,
         clearCart: this.clearCart,
+        removeItem: this.removeItem
       }}>
         {this.props.children}
       </ProductContext.Provider>
