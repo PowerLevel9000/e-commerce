@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const CartTotals = ({ value }) => {
   const { cartSubTotal, cartTax, cartTotal, clearCart } = value
-  console.log( cartSubTotal, cartTax, cartTotal, clearCart )
+  console.log(cartSubTotal, cartTax, cartTotal, clearCart)
   return (
     <>
       <div className="container mx-0">
@@ -22,21 +22,33 @@ const CartTotals = ({ value }) => {
             </Link>
             <h5>
               <span className="text-title">
-                SubTotal : 
+                SubTotal :
               </span>
-              <strong>$ {cartSubTotal}</strong>
+              {cartSubTotal < 10 ? (
+                <strong className='text-left'>$ 0{cartSubTotal}</strong>
+              ) : (
+                <strong className='text-left'>$ {cartSubTotal}</strong>
+              )}
             </h5>
             <h5>
               <span className="text-title">
-                tax : 
+                GST :
               </span>
-              <strong>$ {cartTax}</strong>
+              {cartTax < 10 ? (
+                <strong className='text-left'>$ 0{cartTax}</strong>
+              ) : (
+                <strong className='text-left'>$ {cartTax}</strong>
+              )}
             </h5>
             <h5>
               <span className="text-title">
-                total : 
+                total :
               </span>
-              <strong>$ {cartTotal}</strong>
+              {cartTotal < 10 ? (
+                <strong className='text-left'>$ 0{cartTotal}</strong>
+              ) : (
+                <strong className='text-left'>$ {cartTotal}</strong>
+              )}
             </h5>
           </div>
         </div>
