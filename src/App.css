@@ -8,7 +8,8 @@
 
 body {
   font-family: "Oswald", sans-serif !important;
-  background-color: var(--mainWhite) !important;
+  background: rgb(231, 231, 235);
+  background: radial-gradient(circle, rgba(231, 231, 235, 0.7960434173669468) 0%, rgba(129, 236, 199, 0.7736344537815126) 69%, rgba(0, 155, 255, 0.7372198879551821) 100%);
   color: var(--mainDark) !important;
 }
 
@@ -29,6 +30,7 @@ a {
 .text-bright {
   color: var(--lightBlue) !important;
 }
+
 .text-yellow {
   color: var(--mainYellow) !important;
 }
