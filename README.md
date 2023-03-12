@@ -8,13 +8,16 @@
   
  </div>
 
-<!-- <div align="center">
+<div align="center">
   <h1>App Mock</h1>
-  <img src="./src/media/app-mocks/all-devices-black.png" alt="logo" width="100%"  height="auto" />
+  <img src="./documentation/app-mock/all-devices-black.png" alt="logo" width="100%"  height="auto" />
+  <h1>Mobile view & tablate view</h1>
+  <img src="./documentation/app-mock/mobile-white.png" alt="logo" width="425px"  height="auto" />
+  <img src="./documentation/app-mock/tablet-black.png" alt="logo" width="678px"  height="auto" />
 </div>
 <br>
 <br>
-<br> -->
+<br> 
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -41,11 +44,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Book Store <a name="about-project"></a>
+# 📖 Shopholic <a name="about-project"></a>
 
-> This Project is for organising your books and check the status of it how much you completetd it  
+> This Project is for online shoping of the mobile product  
 
-**Book Store** is a React-oriented project
+**Shopholic** is a React-oriented project
 
 <br>
 
@@ -79,6 +82,7 @@
 <summary>Frame Work</summary>
   <ul>
     <li><a href="https://reactjs.org/">React</a></li>
+    <li><a href="https://reactjs.org/">Context Api</a></li>
   </ul>
 </details>
 
@@ -91,9 +95,11 @@
 
 > Following features you should observe
 
-- **You can add your favorite books**
-- **A home page**
-- **An functionality to check the status**
+- **You can add your product in cart**
+- **You can remove your product from cart**
+- **your total amount of  product in cart**
+- **modal opening on taping cart button**
+- **Details page on tapping on respective product image**
 
 
 
@@ -105,8 +111,7 @@
 
 > This link will guide you to my project
 
-- [Live Demo Link](https://lively-heliotrope-1d9830.netlify.app/)
-<!-- - [Loom Video](https://www.loom.com/share/c97562d2fb964f129f4151ee5d42b9a7) -->
+- [Live Demo Link](https://react-e-commerce-store-react.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,8 +149,8 @@ Clone this repository to your desired folder:
 
  Execute the following thing:
  
- - books adding and removing
- - check status
+ - for selling and buying the products 
+ - check details of the product
 
 
 ### Run tests
@@ -181,20 +186,13 @@ You can deploy this project using:
 - Twitter: [@PowerLevel9002](https://twitter.com/PowerLevel9002?t=AIuSN7mTxk5a_MWpLolEjA&s=09)
 - LinkedIn: [@Adarsh Pathak](https://www.linkedin.com/in/adarsh-pathak-56a831256/)
 
-<!-- 👤 **Martin Karugaba**
-
-- GitHub: [@martinkarugaba](https://github.com/martinkarugaba)
-- Twitter: [@martin_karugaba](https://twitter.com/martin_karugaba)
-- LinkedIn: [@martin_karugaba](https://www.linkedin.com/in/martin-karugaba-822442173/) -->
-
-
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **mobile and tablet version**
+- [ ] **Payment Gateway**
 - [ ] **improve functionality**
 - [ ] **improve styling**
 - [ ] **Some more pages**
@@ -207,7 +205,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/PowerLevel9000/book-store/issues).
+Feel free to check the [issues page](https://github.com/PowerLevel9000/e-commerce/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,20 +223,28 @@ If you like my Project give it a Star ✨🌟
 
 > ask questions to be here 
 
-- **Question_1** How to add a book
+- **Question_1** How to add a product to cart 
 
-  - Answer_1 submit the form to add a book
+  - Answer_1 there is few option to do that:
+      - with cart button appearing on hovering the product
+      - from details page after hitting the product image 
 
-- **Question_2** How to remove a book  
+- **Question_2** How to remove a product from cart  
 
-  - Answer_2 Just Tap on the remove button and wait for a while 
+  - Answer_2 there is few option to do that:
+      - with remove button with respective product in cart page 
+      - be decrementing the quantity to 0 in cart page 
+- **Question_3** How to clear cart  
 
+  - Answer_2 just tap on clear cart on cart page 
+
+  conform on modal for clear cart
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/PowerLevel9000/book-store/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/PowerLevel9000/e-commerce/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
