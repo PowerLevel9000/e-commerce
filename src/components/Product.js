@@ -22,7 +22,7 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
           {this.state.loading ? (
-            <CirclesWithBar color="rgba(56, 160, 186, 0.8)" />
+            <CirclesWithBar color="rgba(56, 160, 186, 0.8)" height="300" width="250"/>
           ) : (
             <ProductConsumer>
               {(value) => (
