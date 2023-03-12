@@ -1,45 +1,76 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { CirclesWithBar } from 'react-loader-spinner'
 import { Link } from 'react-router-dom'
 import { ProductConsumer } from '../context'
 import { PropTypes } from "prop-types"
 
 export default class Product extends Component {
+  state = {
+    loading: true
+  };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1000);
+  }
+
   render() {
-    const { id, title, img, price, inCart } = this.props.product
+    const { id, title, img, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-        <div className='card'>
-          <ProductConsumer>
-            {(value) => {
-              return (
-                <div className='img-container p-5' onClick={() => {
-                  value.handleDetail(id)
-                }}>
+        <div className="card">
+          {this.state.loading ? (
+            <CirclesWithBar color="rgba(56, 160, 186, 0.8)" />
+          ) : (
+            <ProductConsumer>
+              {(value) => (
+                <div
+                  className="img-container p-5"
+                  onClick={() => {
+                    value.handleDetail(id);
+                  }}
+                >
                   <Link to="/details">
-                    <img src={img} alt="product" className='card-img-top' />
+                    <img
+                      src={img}
+                      alt="product"
+                      className="card-img-top"
+                    />
                   </Link>
-                  <button onClick={() => {
-                    value.addToCart(id)
-                    value.openModal(id);
-                    }} className='cart-btn' type='button' disabled={inCart ? true : false}>
-                    {inCart ? <p className='text-capitalize mb-0' disabled>in cart</p> : <i className='fas fa-cart-plus' />}
+                  <button
+                    onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}
+                    className="cart-btn"
+                    type="button"
+                    disabled={inCart ? true : false}
+                  >
+                    {inCart ? (
+                      <p className="text-capitalize mb-0" disabled>
+                        in cart
+                      </p>
+                    ) : (
+                      <i className="fas fa-cart-plus" />
+                    )}
                   </button>
                 </div>
-              )
-            }}
-          </ProductConsumer>
+              )}
+            </ProductConsumer>
+          )}
           {/* card footer */}
-          <div className='card-footer d-flex justify-content-between'>
-            <p className='align-self-center mb-0'>{title}</p>
-            <h5 className='text-blue font-italic mb-0'>
-              <span className='mr-1'>$</span>
+          <div className="card-footer d-flex justify-content-between">
+            <p className="align-self-center mb-0">{title}</p>
+            <h5 className="text-blue font-italic mb-0">
+              <span className="mr-1">$</span>
               {price}
             </h5>
           </div>
         </div>
       </ProductWrapper>
-    )
+    );
   }
 }
 
@@ -52,6 +83,7 @@ Product.propTypes = {
     inCart: PropTypes.bool,
   }).isRequired
 };
+
 
 const ProductWrapper = styled.div`
   .card {
