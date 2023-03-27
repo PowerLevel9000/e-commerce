@@ -48,7 +48,8 @@
 
 > This Project is for online shoping of the mobile product  
 
-**Shopholic** is a React-oriented project
+**Shopholic** is a React-oriented project,
+This is a e-commerce product base website with advance funtionality like "Add to cart, modal, total sub total payment etc" this is build with the help of free code camp yt channel while learning React 
 
 <br>
 
@@ -160,7 +161,6 @@ Clone this repository to your desired folder:
   - `npx eslint "**/*.{js,jsx}` for JS or jsx linting
   - `npx stylelint "**/*.{css,scss}"`for CSS or SCSS linting
   - `--fix` flag for instant fixable fix
-  - `npx hint .` for HTML linting
  
 
 ### Deployment
@@ -218,6 +218,10 @@ Feel free to check the [issues page](https://github.com/PowerLevel9000/e-commerc
 If you like my Project give it a Star ✨🌟 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙇 Acknowledgements <a name="#acknowledgements"></a>
+
+<a href="https://github.com/john-smilga">@john-smilga</a> for great experince in react tutorial
 
 ## ❓ FAQ <a name="faq"></a>
 
